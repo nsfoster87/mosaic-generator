@@ -36,7 +36,7 @@ def main(input_path, output_path):
     max_height = max(img.height for _, img in images)
 
     # Create a new blank image with the total width and max height
-    new_image = Image.new('RGB', (total_width, max_height))
+    new_image = Image.new(images[0][1].mode, (total_width, max_height))
 
     x_offset = 0
     for _, img in images:
